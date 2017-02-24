@@ -72,8 +72,8 @@ figure {
 }
 
 #fh5co-header {
-  padding-top: 40px;
-  margin-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 20px;
 }
 #fh5co-header #fh5co-logo img {
   max-width: 100%;
@@ -110,7 +110,6 @@ figure {
   outline: none;
 }
 #fh5co-header nav ul li.active a {
-  text-decoration: line-through !important;
   color: black !important;
 }
 
