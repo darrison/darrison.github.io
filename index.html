@@ -80,8 +80,8 @@
 						<li><a href="index.html">Illustrations</a></li>
                         <li><a href="characters.html">Characters</a></li>
                         <li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-                        <li><a href="darrisonart.tumblr.com">Tumblr</a></li>
+						<li><a href="mailto:canmwen@gmail.com">Contact</a></li>
+                        <li><a href="https://darrisonart.tumblr.com">Tumblr</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -92,14 +92,32 @@
 		<div class="container-fluid pt70 pb70">
 			<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
 				<div class="fh5co-project masonry-brick">
-						<img src="images/img%201.jpg" img width="100%">
+						
+                    <img id="myImg" src="images/img%201.jpg" alt="Captured, personal" width="100%">
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                    <!-- The Close Button -->
+                    <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+                    <!-- Modal Content (The Image) -->
+                        <img class="modal-content" id="img01">
+
+                    <!-- Modal Caption (Image Text) -->
+                      <div id="caption"></div>
+                    </div>     
 				</div>
+                
+                
 				<div class="fh5co-project masonry-brick">
 					<a href="single.html">
 						<img src="images/img_19.jpg" alt="Free HTML5 by FreeHTML5.co">
 						<h2>Your Project Title Here</h2>
 					</a>
 				</div>
+                
+                
 				<div class="fh5co-project masonry-brick">
 					<a href="single.html">
 						<img src="images/img_3.jpg" alt="Free HTML5 by FreeHTML5.co">
@@ -235,7 +253,31 @@
 	<script src="js/jquery.masonry.min.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
 
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+</script>
 	</body>
 </html>
 
